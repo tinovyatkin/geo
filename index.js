@@ -126,7 +126,7 @@ function coords(point) {
  */
 // eslint-disable-next-line max-statements
 function getDistance(start, end, accuracy, precision) {
-  if (typeof google === 'object' && typeof google.maps === 'object') {
+  if (typeof google === 'object') {
     return google.maps.geometry.spherical.computeDistanceBetween(
       googlePoint(start),
       googlePoint(end),
