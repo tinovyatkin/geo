@@ -25,6 +25,9 @@
     "eslint-plugin-node": "latest",
     "jest": "latest"
   },
+  "browser": {
+    "./lib/native": "./lib/google-maps"
+  },
   "directories": {
     "test": "__tests__"
   },
