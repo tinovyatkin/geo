@@ -26,7 +26,7 @@
     "jest": "latest"
   },
   "browser": {
-    "./lib/native": "./lib/google-maps"
+    "./lib/native.js": "./lib/google-maps.js"
   },
   "directories": {
     "test": "__tests__"
