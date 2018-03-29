@@ -1,5 +1,7 @@
 'use strict';
 
+/* global google */
+
 /**
  * @typedef {number[] | {lat: number, lng: number} | {longitude: number, latitude: number, elevation: number}} geoPoint
  */
@@ -84,6 +86,17 @@ function elevation(point) {
 }
 exports.elevation = elevation;
 
+function googlePoint(point) {
+  // support for {placeId: 'bb'} as point type
+  // https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete-directions
+  if (typeof point === 'object' && 'placeId' in point) return point;
+  return new google.maps.LatLng({
+    lat: latitude(point),
+    lng: longitude(point),
+  });
+}
+exports.googlePoint = googlePoint;
+
 function coords(point) {
   const retval = {
     latitude: point[getKeys(point).latitude],
@@ -113,6 +126,13 @@ function coords(point) {
  */
 // eslint-disable-next-line max-statements
 function getDistance(start, end, accuracy, precision) {
+  if (typeof google === 'object' && typeof google.maps === 'object') {
+    return google.maps.geometry.spherical.computeDistanceBetween(
+      googlePoint(start),
+      googlePoint(end),
+    );
+  }
+
   accuracy = Math.floor(accuracy) || 1;
   precision = Math.floor(precision) || 0;
 
