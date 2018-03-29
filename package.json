@@ -1,6 +1,6 @@
 {
   "name": "@destinationstransfers/geo",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "Collection of small geography functions",
   "main": "index.js",
   "scripts": {
