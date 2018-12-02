@@ -23,7 +23,8 @@
     "@destinationstransfers/eslint-config": "latest",
     "eslint": "latest",
     "eslint-plugin-node": "latest",
-    "jest": "latest"
+    "jest": "latest",
+    "jest-junit": "latest"
   },
   "browser": {
     "./lib/native.js": "./lib/google-maps.js"
@@ -34,7 +35,20 @@
   "jest": {
     "collectCoverage": true,
     "testEnvironment": "node",
-    "verbose": true
+    "verbose": true,
+    "reporters": [
+      "default",
+      [
+        "jest-junit",
+        {
+          "output": "./reports/junit/Jest/test-results.xml"
+        }
+      ]
+    ],
+    "coverageReporters": [
+      "json",
+      "text-summary"
+    ]
   },
   "eslintConfig": {
     "plugins": [
