@@ -1,5 +1,16 @@
 {
+  "enabled": true,
   "extends": [
-    "config:base"
-  ]
+    "config:base",
+    ":pinSkipCi",
+    "default:pinDigestsDisabled",
+    ":automergeMinor"
+  ],
+  "baseBranches": ["master"],
+  "respectLatest": false,
+  "labels": ["dependencies"],
+  "timezone": "America/Santo_Domingo",
+  "pin": {
+    "requiredStatusChecks": null
+  }
 }
