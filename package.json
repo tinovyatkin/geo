@@ -24,7 +24,8 @@
     "eslint": "latest",
     "eslint-plugin-node": "latest",
     "jest": "latest",
-    "jest-junit": "latest"
+    "jest-junit": "latest",
+    "weak": "latest"
   },
   "browser": {
     "./lib/native.js": "./lib/google-maps.js"
