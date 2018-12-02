@@ -29,10 +29,9 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # run tests!
-      - run: 
+      - run:
           name: Run Jest
-          command: node --expose-gc node_modules/.bin/jest --logHeapUsage
-          --maxWorkers=2 --verbose --coverage --detectLeaks
+          command: node --expose-gc node_modules/.bin/jest --logHeapUsage --maxWorkers=2 --verbose --coverage --detectLeaks
 
       - run:
           name: Upload code coverage to Codecov
