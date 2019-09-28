@@ -9,11 +9,15 @@
   "engines": {
     "node": ">=10"
   },
+  "files": [
+    "index.js",
+    "lib/"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/destinationstransfers/geo.git"
   },
-  "author": "Tino Vyatkin <tino@vtkn.io>",
+  "author": "Konstantin Vyatkin <tino@vtkn.io>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/destinationstransfers/geo/issues"
