@@ -58,3 +58,4 @@ typings/
 .env
 
 reports/junit/Jest/test-results.xml
+junit.xml

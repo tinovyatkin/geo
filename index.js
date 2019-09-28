@@ -1,13 +1,28 @@
+/* eslint-disable import/order */
 'use strict';
 
 const { latitude, longitude, elevation } = require('./lib/common');
 
-exports.latitude = latitude;
-exports.longitude = longitude;
-exports.elevation = elevation;
+module.exports.latitude = latitude;
+module.exports.longitude = longitude;
+module.exports.elevation = elevation;
 
-const { getDistance, isPointInCircle, isPointInside } = require('./lib/native');
+const {
+  getDistance,
+  isPointInCircle,
+  isPointInside,
+  getBounds,
+  getCenterOfBounds,
+} = require('./lib/native');
 
-exports.getDistance = getDistance;
-exports.isPointInCircle = isPointInCircle;
-exports.isPointInside = isPointInside;
+module.exports.getDistance = getDistance;
+module.exports.isPointInCircle = isPointInCircle;
+module.exports.isPointInside = isPointInside;
+module.exports.getBounds = getBounds;
+module.exports.getCenterOfBounds = getCenterOfBounds;
+
+const { orderByDistance } = require('./lib/orderByDistance');
+const { findNearest } = require('./lib/findNearest');
+
+module.exports.orderByDistance = orderByDistance;
+module.exports.findNearest = findNearest;

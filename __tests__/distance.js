@@ -3,7 +3,7 @@
 const geolib = require('../');
 
 describe('distance functions', () => {
-  test('Testing distance calculation: getDistance()', () => {
+  it('Testing distance calculation: getDistance()', () => {
     const distance1 = geolib.getDistance(
       { latitude: 52.518611, longitude: 13.408056 },
       { latitude: 51.519475, longitude: 7.46694444 },
@@ -40,7 +40,7 @@ describe('distance functions', () => {
     expect(geoJSON).toBe(246);
   });
 
-  test('isPointInside', () => {
+  it('isPointInside', () => {
     const polygon = [
       { latitude: 51.513357512, longitude: 7.45574331 },
       { latitude: 51.515400598, longitude: 7.45518541 },

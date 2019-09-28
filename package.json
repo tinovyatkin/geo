@@ -7,7 +7,7 @@
     "test": "jest"
   },
   "engines": {
-    "node": ">=8"
+    "node": ">=10"
   },
   "repository": {
     "type": "git",
@@ -20,12 +20,12 @@
   },
   "homepage": "https://github.com/destinationstransfers/geo#readme",
   "devDependencies": {
-    "@destinationstransfers/eslint-config": "latest",
+    "@destinationstransfers/eslint-plugin": "2.9.9",
+    "@types/googlemaps": "3.37.7",
+    "@types/jest": "24.0.18",
     "eslint": "latest",
-    "eslint-plugin-node": "latest",
-    "jest": "latest",
-    "jest-junit": "latest",
-    "weak": "latest"
+    "jest": "25.0.0",
+    "jest-junit": "latest"
   },
   "browser": {
     "./lib/native.js": "./lib/google-maps.js"
@@ -53,20 +53,16 @@
   },
   "eslintConfig": {
     "plugins": [
-      "node"
+      "@destinationstransfers"
     ],
     "extends": [
-      "@destinationstransfers",
-      "plugin:node/recommended"
+      "plugin:@destinationstransfers/recommended"
     ],
     "env": {
       "node": true
     },
     "parserOptions": {
       "sourceType": "script"
-    },
-    "rules": {
-      "prefer-object-spread/prefer-object-spread": "off"
     }
   }
 }
