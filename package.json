@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/destinationstransfers/geo#readme",
   "devDependencies": {
-    "@destinationstransfers/eslint-plugin": "2.9.107",
+    "@destinationstransfers/eslint-plugin": "2.9.108",
     "@types/googlemaps": "3.39.3",
     "@types/jest": "24.9.1",
     "eslint": "latest",
