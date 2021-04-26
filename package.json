@@ -26,7 +26,7 @@
   "devDependencies": {
     "@destinationstransfers/eslint-plugin": "2.9.154",
     "@types/googlemaps": "3.39.6",
-    "@types/jest": "24.9.1",
+    "@types/jest": "26.0.23",
     "eslint": "latest",
     "jest": "26.0.1",
     "jest-junit": "latest"
